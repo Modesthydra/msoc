@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Param;
  * Created by bysocket on 07/02/2017.
  */
 public interface CarInfoDao {
-    CarInfo findById(@Param("cityName") String id);
+    CarInfo findById(@Param("carid") String id);
 }
