@@ -1,0 +1,31 @@
+#配置日志
+logging:
+  #配置日志文件路径
+#  path: /home/log
+  file: /home/log/test.log
+  level:
+    root: info #不同目录下的日志可配置不同级别
+    org.springfromework.web: info
+    org.hibernate: error
+#启动端口
+server:
+  port: 8081
+#Mybatis设置
+mybatis:
+#  config-location:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: com.yy.msoc.entities
+#  type-handlers-package:
+#  check-config-location: false
+  executor-type: simple
+
+spring:
+# Spring Profiles Active
+  profiles:
+    active: dev
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:mysql://101.132.160.137:15432/msoc?useUnicode=true&characterEncoding=utf-8
+    username: postgres
+    password: 1q2w3e4r
